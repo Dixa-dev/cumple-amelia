@@ -47,7 +47,7 @@ const Portada = ({ data, bounce }) => {
           objectFit: "contain",
           zIndex: 1,
           marginBottom: "-12vh",
-          marginTop:"-4vh" // Ajusta el margen para acercarlo al texto
+          marginTop:"-10vh" // Ajusta el margen para acercarlo al texto
         }}
       />
 
