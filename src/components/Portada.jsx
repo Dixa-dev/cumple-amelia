@@ -52,6 +52,12 @@ const Portada = ({ data, bounce }) => {
       />
 
       {/* Texto AMELIA 6 */}
+      <Box 
+      sx={{
+        display:"flex",
+        flexDirection:"column",
+        alignItems:"center"
+      }}>
       <Box
         sx={{
           display: "flex",
@@ -85,10 +91,8 @@ const Portada = ({ data, bounce }) => {
         >
           6
         </Typography>
-      </Box>
-
-      {/* Icono de flecha hacia abajo */}
-      <KeyboardArrowDownRoundedIcon
+        </Box>
+        <KeyboardArrowDownRoundedIcon
         sx={{
           color: "black",
           fontSize: 50,
@@ -101,6 +105,10 @@ const Portada = ({ data, bounce }) => {
         }}
         onClick={handleScroll}
       />
+      </Box>
+
+      {/* Icono de flecha hacia abajo */}
+    
     </Box>
   );
 };
