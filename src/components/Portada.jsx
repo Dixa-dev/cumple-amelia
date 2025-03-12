@@ -93,7 +93,7 @@ const Portada = ({ data, bounce }) => {
           color: "black",
           fontSize: 50,
           position: "absolute",
-          bottom: 20, // Fija la posición en la parte inferior
+          bottom: 30, // Fija la posición en la parte inferior
           transform: "translateX(-50%)",
           cursor: "pointer",
           animation: `${bounce} 2s infinite`,
