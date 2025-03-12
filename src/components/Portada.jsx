@@ -22,7 +22,7 @@ const Portada = ({ data, bounce }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "5vh 0", // Añade espacio para evitar desbordes en mobile
+        padding: "5vh 0",
       }}
     >
       {/* Imagen de fondo */}
@@ -45,11 +45,11 @@ const Portada = ({ data, bounce }) => {
         src="https://res.cloudinary.com/dqqbiacuz/image/upload/v1741650164/Merlina_con_manos_1_zzuj6t.png"
         alt="Merlina"
         style={{
-          maxWidth: isMobile ? "50%" : "70%",
-          maxHeight: isMobile ? "40vh" : "65vh",
+          maxWidth: isMobile ? "70%" : "70%",
+          maxHeight: isMobile ? "50vh" : "65vh",
           objectFit: "contain",
           zIndex: 1,
-          marginBottom: isMobile ? "-8vh" : "-15vh",
+          marginBottom: isMobile ? "-6vh" : "-15vh",
         }}
       />
 
@@ -67,7 +67,7 @@ const Portada = ({ data, bounce }) => {
           sx={{
             fontFamily: "Nucreativo2008, sans-serif",
             color: "black",
-            fontSize: isMobile ? "40px" : "70px",
+            fontSize: isMobile ? "55px" : "70px",
             textAlign: "center",
             zIndex: 1,
           }}
@@ -76,10 +76,10 @@ const Portada = ({ data, bounce }) => {
         </Typography>
         <Typography
           sx={{
-            fontSize: isMobile ? "120px" : "200px",
+            fontSize: isMobile ? "160px" : "200px",
             fontWeight: "600",
             color: "#C1658E",
-            marginLeft: isMobile ? "-25px" : "-45px",
+            marginLeft: isMobile ? "-35px" : "-45px",
             WebkitTextStrokeColor: "black",
             WebkitTextStrokeWidth: "1px",
             zIndex: 0,
@@ -93,9 +93,9 @@ const Portada = ({ data, bounce }) => {
       <KeyboardArrowDownRoundedIcon
         sx={{
           color: "black",
-          fontSize: isMobile ? 40 : 50,
+          fontSize: isMobile ? 45 : 50,
           position: "absolute",
-          bottom: isMobile ? "5vh" : "2vh", // Asegura que sea visible en mobile
+          bottom: isMobile ? "8vh" : "2vh",
           cursor: "pointer",
           animation: `${bounce} 2s infinite`,
           zIndex: 2,
