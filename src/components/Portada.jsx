@@ -96,12 +96,10 @@ const Portada = ({ data, bounce }) => {
         sx={{
           color: "black",
           fontSize: 50,
-          position: "absolute",
-          bottom: 30, // Fija la posición en la parte inferior
-          transform: "translateX(-50%)",
+          // position: "absolute",
           cursor: "pointer",
           animation: `${bounce} 2s infinite`,
-          zIndex: 2,
+          zIndex: 1,
         }}
         onClick={handleScroll}
       />
