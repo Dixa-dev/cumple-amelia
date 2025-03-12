@@ -3,9 +3,9 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 
 const Portada = ({ data, bounce }) => {
   const handleScroll = () => {
-    const location = document.getElementById("location");
-    if (location) {
-      location.scrollIntoView({ behavior: "smooth" });
+    const fraseInicial = document.getElementById("frase-inicial");
+    if (fraseInicial) {
+      fraseInicial.scrollIntoView({ behavior: "smooth", block: "start"});
     }
   };
 
