@@ -5,7 +5,7 @@ const Portada = ({ data, bounce }) => {
   const handleScroll = () => {
     const location = document.getElementById("location");
     if (location) {
-    location.scrollIntoView({ behavior: "smooth" });
+      location.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -47,7 +47,7 @@ const Portada = ({ data, bounce }) => {
           objectFit: "contain",
           zIndex: 1,
           marginBottom: "-12vh",
-          // marginTop:"4vh" // Ajusta el margen para acercarlo al texto
+          marginTop:"-4vh" // Ajusta el margen para acercarlo al texto
         }}
       />
 
@@ -58,9 +58,7 @@ const Portada = ({ data, bounce }) => {
           flexDirection: "row",
           alignItems: "center",
           zIndex: 1,
-          marginBottom:"-5vh"
-
-          
+          marginBottom: "-5vh",
         }}
       >
         <Typography
@@ -100,7 +98,6 @@ const Portada = ({ data, bounce }) => {
           cursor: "pointer",
           animation: `${bounce} 2s infinite`,
           zIndex: 2,
-          
         }}
         onClick={handleScroll}
       />
