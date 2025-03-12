@@ -20,7 +20,6 @@ const Portada = ({ data, bounce }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center", // Centra los elementos verticalmente
-        gap: "5px", // Reduce el espacio entre los elementos
       }}
     >
       {/* Imagen de fondo */}
