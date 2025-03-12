@@ -42,7 +42,7 @@ const Portada = ({ data, bounce }) => {
         src="https://res.cloudinary.com/dqqbiacuz/image/upload/v1741650164/Merlina_con_manos_1_zzuj6t.png"
         alt="Merlina"
         style={{
-          maxWidth: "80%", // Se mantiene el tamaño original
+          maxWidth: "70%", // Se mantiene el tamaño original
           maxHeight: "65vh",
           objectFit: "contain",
           zIndex: 1,
