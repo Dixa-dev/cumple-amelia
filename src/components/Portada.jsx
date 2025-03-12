@@ -58,6 +58,8 @@ const Portada = ({ data, bounce }) => {
           flexDirection: "row",
           alignItems: "center",
           zIndex: 1,
+          marginBottom:"-5vh"
+
           
         }}
       >
