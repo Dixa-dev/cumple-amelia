@@ -13,7 +13,7 @@ const db = {
   date: "2025-03-29T12:30:00",
   location: "https://g.co/kgs/EYzqaU1",
   imgCover: "https://res.cloudinary.com/dqqbiacuz/image/upload/v1741648509/a4dd95d0a51e76e3267fa0e77d5a810b_1_m5wlce.png",
-  phoneNumber: "5492617113209",
+  phoneNumber: "5492215792334",
 };
 
 const bounce = keyframes`
