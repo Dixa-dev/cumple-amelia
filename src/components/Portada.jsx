@@ -1,11 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
 const Portada = ({ data, bounce }) => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   const handleScroll = () => {
     const location = document.getElementById("location");
     if (location) {
-    location.scrollIntoView({ behavior: "smooth" });
+      location.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -19,7 +21,8 @@ const Portada = ({ data, bounce }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center", // Centra los elementos verticalmente
+        justifyContent: "center",
+        padding: "5vh 0", // Añade espacio para evitar desbordes en mobile
       }}
     >
       {/* Imagen de fondo */}
@@ -42,12 +45,11 @@ const Portada = ({ data, bounce }) => {
         src="https://res.cloudinary.com/dqqbiacuz/image/upload/v1741650164/Merlina_con_manos_1_zzuj6t.png"
         alt="Merlina"
         style={{
-          maxWidth: "70%", // Se mantiene el tamaño original
-          maxHeight: "65vh",
+          maxWidth: isMobile ? "50%" : "70%",
+          maxHeight: isMobile ? "40vh" : "65vh",
           objectFit: "contain",
           zIndex: 1,
-
-          marginBottom:"-15vh" // Ajusta el margen para acercarlo al texto
+          marginBottom: isMobile ? "-8vh" : "-15vh",
         }}
       />
 
@@ -58,15 +60,14 @@ const Portada = ({ data, bounce }) => {
           flexDirection: "row",
           alignItems: "center",
           zIndex: 1,
-          marginBottom:"-5vh"
-          
+          marginBottom: isMobile ? "-2vh" : "-5vh",
         }}
       >
         <Typography
           sx={{
             fontFamily: "Nucreativo2008, sans-serif",
             color: "black",
-            fontSize: "70px",
+            fontSize: isMobile ? "40px" : "70px",
             textAlign: "center",
             zIndex: 1,
           }}
@@ -75,10 +76,10 @@ const Portada = ({ data, bounce }) => {
         </Typography>
         <Typography
           sx={{
-            fontSize: "200px",
+            fontSize: isMobile ? "120px" : "200px",
             fontWeight: "600",
             color: "#C1658E",
-            marginLeft: "-45px",
+            marginLeft: isMobile ? "-25px" : "-45px",
             WebkitTextStrokeColor: "black",
             WebkitTextStrokeWidth: "1px",
             zIndex: 0,
@@ -92,14 +93,12 @@ const Portada = ({ data, bounce }) => {
       <KeyboardArrowDownRoundedIcon
         sx={{
           color: "black",
-          fontSize: 50,
+          fontSize: isMobile ? 40 : 50,
           position: "absolute",
-          bottom: 10, // Fija la posición en la parte inferior
-          transform: "translateX(-50%)",
+          bottom: isMobile ? "5vh" : "2vh", // Asegura que sea visible en mobile
           cursor: "pointer",
           animation: `${bounce} 2s infinite`,
           zIndex: 2,
-          
         }}
         onClick={handleScroll}
       />
