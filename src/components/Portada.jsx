@@ -47,8 +47,8 @@ const Portada = ({ data, bounce }) => {
           maxHeight: "65vh",
           objectFit: "contain",
           zIndex: 1,
-          marginBottom: "-12vh",
-          marginTop:"8vh" // Ajusta el margen para acercarlo al texto
+          marginBottom: "-10vh",
+          marginTop:"6vh" // Ajusta el margen para acercarlo al texto
         }}
       />
 
