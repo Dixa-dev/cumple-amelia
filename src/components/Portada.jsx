@@ -43,12 +43,12 @@ const Portada = ({ data, bounce }) => {
         src="https://res.cloudinary.com/dqqbiacuz/image/upload/v1741650164/Merlina_con_manos_1_zzuj6t.png"
         alt="Merlina"
         style={{
-          maxWidth: "90%", // Se mantiene el tamaño original
+          maxWidth: "80%", // Se mantiene el tamaño original
           maxHeight: "65vh",
           objectFit: "contain",
           zIndex: 1,
-          marginBottom: "-10vh",
-          marginTop:"6vh" // Ajusta el margen para acercarlo al texto
+          marginBottom: "-5vh",
+          marginTop:"3vh" // Ajusta el margen para acercarlo al texto
         }}
       />
 
