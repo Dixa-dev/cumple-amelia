@@ -46,7 +46,7 @@ const Confirmation = ({ phoneNumber }) => {
         onClick={() =>
           window.open(
             `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
-              "¡Hola! Quiero confirmar mi asistencia"
+              "¡Hola! Quiero confirmar mi asistencia al cumple de Ame"
             )}`,
             "_blank"
           )
