@@ -1,5 +1,6 @@
-import { Box, keyframes, Typography, ThemeProvider } from "@mui/material";
-import { useState } from "react";
+import { Box, keyframes, ThemeProvider, IconButton } from "@mui/material";
+import { useState, useEffect, useRef } from "react";
+import { VolumeOff, VolumeUp } from "@mui/icons-material";
 import Portada from "./components/Portada";
 import theme from "./theme.js";
 import FraseInicial from "./components/FraseInicial.jsx";
@@ -31,15 +32,55 @@ const bounce = keyframes`
 
 function App() {
   const [data] = useState(db);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      isPlaying ? audioRef.current.play() : audioRef.current.pause();
+    }
+  }, [isPlaying]);
+
+  // Función para activar la música al hacer scroll
+  const handleScrollClick = () => {
+    if (!isPlaying) {
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <ThemeProvider theme={theme}>
-      <Portada data={data} bounce={bounce} />
+      {/* Ícono de megáfono para controlar la música */}
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: 20,
+          right: 20,
+          zIndex: 1000,
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          borderRadius: "50%",
+          padding: "6px",
+        }}
+      >
+        <IconButton onClick={() => setIsPlaying(!isPlaying)} sx={{ color: "white" }}>
+          {isPlaying ? <VolumeUp fontSize="medium" /> : <VolumeOff fontSize="medium" />}
+        </IconButton>
+      </Box>
+
+      {/* Reproductor de audio oculto */}
+      <audio ref={audioRef} loop>
+        <source
+          src="https://res.cloudinary.com/dqqbiacuz/video/upload/v1741745037/Goo_Goo_Muck_c5lsm7.mp3"
+          type="audio/mp3"
+        />
+      </audio>
+
+      {/* Pasamos la función al componente de Portada para activarla en el scroll */}
+      <Portada data={data} bounce={bounce} onScrollClick={handleScrollClick} />
       <FraseInicial />
       <Location data={data} bounce={bounce} />
       <Countdown targetDate={data.date} />
       <Confirmation phoneNumber={data.phoneNumber} />
-
       <Footer />
     </ThemeProvider>
   );
