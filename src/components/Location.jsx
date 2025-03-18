@@ -46,7 +46,7 @@ const Location = ({ data, bounce }) => {
         <Typography
           sx={{ color: "#FBF8F1", fontSize: "18px", fontWeight: "300" }}
         >
-          12:30 HS
+          de 12:30 a 15:30 hs
         </Typography>
       </Box>
       <Box sx={{ marginBottom: "2vh" }}>
