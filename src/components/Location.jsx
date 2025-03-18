@@ -6,7 +6,7 @@ import Countdown from "./Countdown";
 const Location = ({ data, bounce }) => {
   return (
     <Box
-    id="location"
+      id="location"
       sx={{
         bgcolor: " #676491;",
         display: "flex",
@@ -22,9 +22,10 @@ const Location = ({ data, bounce }) => {
           sx={{
             color: "#FBF8F1",
             fontSize: "50px",
-            fill: "none", // Elimina el relleno
-            stroke: "#FBF8F1", // Define el color de las líneas
-            strokeWidth: 0.5, // Controla el grosor de las líneas
+            fill: "none",
+            stroke: "#FBF8F1",
+            strokeWidth: 0.5,
+            animation: `${bounce} 2s infinite`, // Agregamos la animación bounce
           }}
         />
         <Typography
@@ -79,14 +80,16 @@ const Location = ({ data, bounce }) => {
         >
           Calle 421 N°417 e/ Centenario y 5
         </Typography>
-        <Typography sx={{ color: "#FBF8F1", fontSize: "20px", fontWeight: "300" }}>
-        Villa Elisa{" "}
+        <Typography
+          sx={{ color: "#FBF8F1", fontSize: "20px", fontWeight: "300" }}
+        >
+          Villa Elisa{" "}
         </Typography>
         <Link
           href={data.location}
           target="_blank"
           rel="noopener noreferrer"
-          sx={{ textDecoration: "none",  }}
+          sx={{ textDecoration: "none" }}
         >
           <Button
             variant="contained"
@@ -101,7 +104,6 @@ const Location = ({ data, bounce }) => {
           </Button>
         </Link>
       </Box>
-
     </Box>
   );
 };

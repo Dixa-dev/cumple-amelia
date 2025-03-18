@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-const Confirmation = ({ phoneNumber }) => {
+const Confirmation = ({ phoneNumber, bounce }) => {
   return (
     <Box
       sx={{
@@ -40,7 +40,7 @@ const Confirmation = ({ phoneNumber }) => {
       >
         ¿Venis a festejar? ¡Confirmá tu asistencia!
       </Typography>
-      
+
       {/* Botón de WhatsApp */}
       <button
         onClick={() =>
@@ -51,18 +51,25 @@ const Confirmation = ({ phoneNumber }) => {
             "_blank"
           )
         }
-        style={{ 
-          background: "none", 
-          border: "none", 
+        style={{
+          background: "none",
+          border: "none",
           cursor: "pointer",
-          zIndex: 1 // Asegura el botón esté sobre el árbol
+          zIndex: 1, // Asegura el botón esté sobre el árbol
         }}
       >
+        <Box sx={{
+            animation: `${bounce} 2s infinite`, // Agrega animación bounce
+          }}>
         <img
           src="https://res.cloudinary.com/dqqbiacuz/image/upload/v1741738312/whatsapp_pb5nqp.png"
           alt="icon-whatsApp"
-          style={{ width: "12vw" }} // Tamaño responsivo
+          style={{
+            width: "12vw", // Tamaño responsivo
+          }}
+          
         />
+        </Box>
       </button>
     </Box>
   );
